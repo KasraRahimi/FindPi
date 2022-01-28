@@ -10,6 +10,7 @@ def AreaUnderCurve(func, start=0, end=1, it=1):
     area = 0
     for num in range(it):
         area += dx * func(start + dx * num)
+        print(f'Process is {num*100/it:.2f}% done', end='\r')
     return area
 
 AreaOfHalf = AreaUnderCurve(HalfCircle, -1, 1, it)
